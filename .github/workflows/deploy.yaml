@@ -2,7 +2,7 @@ name: Deploy frontend-wsl
 on:
   push:
     branches:
-      - master # check your repo, your default branch might be master!
+      - master # check your repo, your default branch might be master!  
  
 jobs:
   build:
@@ -21,10 +21,10 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
-          application_name: docker-ebs
-          environment_name: Dockerebs-env
-          existing_bucket_name: elasticbeanstalk-ap-south-1-955367139832
-          region: ap-south-1
+          application_name: docker-ebs                                          #check
+          environment_name: Dockerebs-env                                       #check
+          existing_bucket_name: elasticbeanstalk-ap-south-1-955367139832        #check
+          region: ap-south-1                                                    #check
           version_label: ${{ github.sha }}
           deployment_package: deploy.zip
 
